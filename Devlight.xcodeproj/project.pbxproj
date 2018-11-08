@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A062AD852193E966000A3221 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A062AD842193E966000A3221 /* AppDelegate.swift */; };
-		A062AD872193E966000A3221 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A062AD862193E966000A3221 /* ViewController.swift */; };
-		A062AD8A2193E966000A3221 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A062AD882193E966000A3221 /* Main.storyboard */; };
 		A062AD8C2193E968000A3221 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A062AD8B2193E968000A3221 /* Assets.xcassets */; };
 		A062AD8F2193E968000A3221 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A062AD8D2193E968000A3221 /* LaunchScreen.storyboard */; };
 		A062AD9A2193E968000A3221 /* DevlightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A062AD992193E968000A3221 /* DevlightTests.swift */; };
@@ -36,8 +34,6 @@
 /* Begin PBXFileReference section */
 		A062AD812193E966000A3221 /* Devlight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Devlight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A062AD842193E966000A3221 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A062AD862193E966000A3221 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A062AD892193E966000A3221 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A062AD8B2193E968000A3221 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A062AD8E2193E968000A3221 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A062AD902193E968000A3221 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -98,11 +94,9 @@
 			isa = PBXGroup;
 			children = (
 				A062AD842193E966000A3221 /* AppDelegate.swift */,
-				A062AD862193E966000A3221 /* ViewController.swift */,
-				A062AD882193E966000A3221 /* Main.storyboard */,
-				A062AD8B2193E968000A3221 /* Assets.xcassets */,
-				A062AD8D2193E968000A3221 /* LaunchScreen.storyboard */,
-				A062AD902193E968000A3221 /* Info.plist */,
+				A062ADB22193EB21000A3221 /* Scenes */,
+				A062ADB32193EB2E000A3221 /* Library */,
+				A062ADB52193EB47000A3221 /* Supporting Files */,
 			);
 			path = Devlight;
 			sourceTree = "<group>";
@@ -123,6 +117,30 @@
 				A062ADA62193E968000A3221 /* Info.plist */,
 			);
 			path = DevlightUITests;
+			sourceTree = "<group>";
+		};
+		A062ADB22193EB21000A3221 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		A062ADB32193EB2E000A3221 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		A062ADB52193EB47000A3221 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A062AD8B2193E968000A3221 /* Assets.xcassets */,
+				A062AD8D2193E968000A3221 /* LaunchScreen.storyboard */,
+				A062AD902193E968000A3221 /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,7 +249,6 @@
 			files = (
 				A062AD8F2193E968000A3221 /* LaunchScreen.storyboard in Resources */,
 				A062AD8C2193E968000A3221 /* Assets.xcassets in Resources */,
-				A062AD8A2193E966000A3221 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,7 +273,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A062AD872193E966000A3221 /* ViewController.swift in Sources */,
 				A062AD852193E966000A3221 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,14 +309,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A062AD882193E966000A3221 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A062AD892193E966000A3221 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A062AD8D2193E968000A3221 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -434,7 +442,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C458VM5GZ7;
-				INFOPLIST_FILE = Devlight/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Devlight/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -442,7 +450,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.andersonoliveira.Devlight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -452,7 +460,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C458VM5GZ7;
-				INFOPLIST_FILE = Devlight/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Devlight/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -460,7 +468,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.andersonoliveira.Devlight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
