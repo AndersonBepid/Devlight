@@ -7,11 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A0479D5B21945EFC0069B807 /* SF in Resources */ = {isa = PBXBuildFile; fileRef = A0479D5A21945EFC0069B807 /* SF */; };
+		A0479D5D21946B5B0069B807 /* UIColor+Colorhistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0479D5C21946B5B0069B807 /* UIColor+Colorhistory.swift */; };
 		A062AD852193E966000A3221 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A062AD842193E966000A3221 /* AppDelegate.swift */; };
 		A062AD8C2193E968000A3221 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A062AD8B2193E968000A3221 /* Assets.xcassets */; };
 		A062AD8F2193E968000A3221 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A062AD8D2193E968000A3221 /* LaunchScreen.storyboard */; };
 		A062AD9A2193E968000A3221 /* DevlightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A062AD992193E968000A3221 /* DevlightTests.swift */; };
 		A062ADA52193E968000A3221 /* DevlightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A062ADA42193E968000A3221 /* DevlightUITests.swift */; };
+		A062ADBA21944EC3000A3221 /* Portfolio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A062ADB921944EC3000A3221 /* Portfolio.storyboard */; };
+		A062ADC121944EDE000A3221 /* PortfolioPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A062ADBB21944EDE000A3221 /* PortfolioPresenter.swift */; };
+		A062ADC221944EDE000A3221 /* PortfolioRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A062ADBC21944EDE000A3221 /* PortfolioRouter.swift */; };
+		A062ADC321944EDE000A3221 /* PortfolioModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A062ADBD21944EDE000A3221 /* PortfolioModels.swift */; };
+		A062ADC421944EDE000A3221 /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A062ADBE21944EDE000A3221 /* PortfolioViewController.swift */; };
+		A062ADC521944EDE000A3221 /* PortfolioInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A062ADBF21944EDE000A3221 /* PortfolioInteractor.swift */; };
+		A062ADC621944EDE000A3221 /* PortfolioConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A062ADC021944EDE000A3221 /* PortfolioConfigurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A0479D5A21945EFC0069B807 /* SF */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SF; sourceTree = "<group>"; };
+		A0479D5C21946B5B0069B807 /* UIColor+Colorhistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Colorhistory.swift"; sourceTree = "<group>"; };
 		A062AD812193E966000A3221 /* Devlight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Devlight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A062AD842193E966000A3221 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A062AD8B2193E968000A3221 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,6 +54,13 @@
 		A062ADA02193E968000A3221 /* DevlightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DevlightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A062ADA42193E968000A3221 /* DevlightUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevlightUITests.swift; sourceTree = "<group>"; };
 		A062ADA62193E968000A3221 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A062ADB921944EC3000A3221 /* Portfolio.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Portfolio.storyboard; sourceTree = "<group>"; };
+		A062ADBB21944EDE000A3221 /* PortfolioPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioPresenter.swift; sourceTree = "<group>"; };
+		A062ADBC21944EDE000A3221 /* PortfolioRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioRouter.swift; sourceTree = "<group>"; };
+		A062ADBD21944EDE000A3221 /* PortfolioModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioModels.swift; sourceTree = "<group>"; };
+		A062ADBE21944EDE000A3221 /* PortfolioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewController.swift; sourceTree = "<group>"; };
+		A062ADBF21944EDE000A3221 /* PortfolioInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioInteractor.swift; sourceTree = "<group>"; };
+		A062ADC021944EDE000A3221 /* PortfolioConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioConfigurator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +88,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A0479D5E21946B610069B807 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A0479D5C21946B5B0069B807 /* UIColor+Colorhistory.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		A062AD782193E965000A3221 = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +148,7 @@
 		A062ADB22193EB21000A3221 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				A062ADB721944E85000A3221 /* Portfolio Scene */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -129,6 +156,7 @@
 		A062ADB32193EB2E000A3221 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				A0479D5E21946B610069B807 /* Extensions */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -136,11 +164,34 @@
 		A062ADB52193EB47000A3221 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A062ADC72194563C000A3221 /* Fonts */,
 				A062AD8B2193E968000A3221 /* Assets.xcassets */,
 				A062AD8D2193E968000A3221 /* LaunchScreen.storyboard */,
 				A062AD902193E968000A3221 /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A062ADB721944E85000A3221 /* Portfolio Scene */ = {
+			isa = PBXGroup;
+			children = (
+				A062ADB921944EC3000A3221 /* Portfolio.storyboard */,
+				A062ADBB21944EDE000A3221 /* PortfolioPresenter.swift */,
+				A062ADBC21944EDE000A3221 /* PortfolioRouter.swift */,
+				A062ADBD21944EDE000A3221 /* PortfolioModels.swift */,
+				A062ADBE21944EDE000A3221 /* PortfolioViewController.swift */,
+				A062ADBF21944EDE000A3221 /* PortfolioInteractor.swift */,
+				A062ADC021944EDE000A3221 /* PortfolioConfigurator.swift */,
+			);
+			path = "Portfolio Scene";
+			sourceTree = "<group>";
+		};
+		A062ADC72194563C000A3221 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A0479D5A21945EFC0069B807 /* SF */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,8 +298,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A062ADBA21944EC3000A3221 /* Portfolio.storyboard in Resources */,
 				A062AD8F2193E968000A3221 /* LaunchScreen.storyboard in Resources */,
 				A062AD8C2193E968000A3221 /* Assets.xcassets in Resources */,
+				A0479D5B21945EFC0069B807 /* SF in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +326,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A062ADC221944EDE000A3221 /* PortfolioRouter.swift in Sources */,
+				A062ADC421944EDE000A3221 /* PortfolioViewController.swift in Sources */,
 				A062AD852193E966000A3221 /* AppDelegate.swift in Sources */,
+				A062ADC321944EDE000A3221 /* PortfolioModels.swift in Sources */,
+				A062ADC121944EDE000A3221 /* PortfolioPresenter.swift in Sources */,
+				A062ADC521944EDE000A3221 /* PortfolioInteractor.swift in Sources */,
+				A0479D5D21946B5B0069B807 /* UIColor+Colorhistory.swift in Sources */,
+				A062ADC621944EDE000A3221 /* PortfolioConfigurator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
