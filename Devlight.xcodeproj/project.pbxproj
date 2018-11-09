@@ -9,6 +9,21 @@
 /* Begin PBXBuildFile section */
 		A0479D5B21945EFC0069B807 /* SF in Resources */ = {isa = PBXBuildFile; fileRef = A0479D5A21945EFC0069B807 /* SF */; };
 		A0479D5D21946B5B0069B807 /* UIColor+Colorhistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0479D5C21946B5B0069B807 /* UIColor+Colorhistory.swift */; };
+		A0479D64219536F20069B807 /* AppStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0479D63219536F20069B807 /* AppStoryboard.swift */; };
+		A0479D662195372C0069B807 /* HowWork.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0479D652195372C0069B807 /* HowWork.storyboard */; };
+		A0479D6D219537420069B807 /* HowWorkPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0479D67219537420069B807 /* HowWorkPresenter.swift */; };
+		A0479D6E219537420069B807 /* HowWorkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0479D68219537420069B807 /* HowWorkRouter.swift */; };
+		A0479D6F219537420069B807 /* HowWorkModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0479D69219537420069B807 /* HowWorkModels.swift */; };
+		A0479D70219537420069B807 /* HowWorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0479D6A219537420069B807 /* HowWorkViewController.swift */; };
+		A0479D71219537420069B807 /* HowWorkInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0479D6B219537420069B807 /* HowWorkInteractor.swift */; };
+		A0479D72219537420069B807 /* HowWorkConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0479D6C219537420069B807 /* HowWorkConfigurator.swift */; };
+		A0479D74219538310069B807 /* WorkWith.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0479D73219538310069B807 /* WorkWith.storyboard */; };
+		A0479D7B219538490069B807 /* WorkWithPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0479D75219538490069B807 /* WorkWithPresenter.swift */; };
+		A0479D7C219538490069B807 /* WorkWithRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0479D76219538490069B807 /* WorkWithRouter.swift */; };
+		A0479D7D219538490069B807 /* WorkWithModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0479D77219538490069B807 /* WorkWithModels.swift */; };
+		A0479D7E219538490069B807 /* WorkWithViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0479D78219538490069B807 /* WorkWithViewController.swift */; };
+		A0479D7F219538490069B807 /* WorkWithInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0479D79219538490069B807 /* WorkWithInteractor.swift */; };
+		A0479D80219538490069B807 /* WorkWithConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0479D7A219538490069B807 /* WorkWithConfigurator.swift */; };
 		A062AD852193E966000A3221 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A062AD842193E966000A3221 /* AppDelegate.swift */; };
 		A062AD8C2193E968000A3221 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A062AD8B2193E968000A3221 /* Assets.xcassets */; };
 		A062AD8F2193E968000A3221 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A062AD8D2193E968000A3221 /* LaunchScreen.storyboard */; };
@@ -43,6 +58,21 @@
 /* Begin PBXFileReference section */
 		A0479D5A21945EFC0069B807 /* SF */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SF; sourceTree = "<group>"; };
 		A0479D5C21946B5B0069B807 /* UIColor+Colorhistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Colorhistory.swift"; sourceTree = "<group>"; };
+		A0479D63219536F20069B807 /* AppStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoryboard.swift; sourceTree = "<group>"; };
+		A0479D652195372C0069B807 /* HowWork.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HowWork.storyboard; sourceTree = "<group>"; };
+		A0479D67219537420069B807 /* HowWorkPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowWorkPresenter.swift; sourceTree = "<group>"; };
+		A0479D68219537420069B807 /* HowWorkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowWorkRouter.swift; sourceTree = "<group>"; };
+		A0479D69219537420069B807 /* HowWorkModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowWorkModels.swift; sourceTree = "<group>"; };
+		A0479D6A219537420069B807 /* HowWorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowWorkViewController.swift; sourceTree = "<group>"; };
+		A0479D6B219537420069B807 /* HowWorkInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowWorkInteractor.swift; sourceTree = "<group>"; };
+		A0479D6C219537420069B807 /* HowWorkConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowWorkConfigurator.swift; sourceTree = "<group>"; };
+		A0479D73219538310069B807 /* WorkWith.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WorkWith.storyboard; sourceTree = "<group>"; };
+		A0479D75219538490069B807 /* WorkWithPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkWithPresenter.swift; sourceTree = "<group>"; };
+		A0479D76219538490069B807 /* WorkWithRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkWithRouter.swift; sourceTree = "<group>"; };
+		A0479D77219538490069B807 /* WorkWithModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkWithModels.swift; sourceTree = "<group>"; };
+		A0479D78219538490069B807 /* WorkWithViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkWithViewController.swift; sourceTree = "<group>"; };
+		A0479D79219538490069B807 /* WorkWithInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkWithInteractor.swift; sourceTree = "<group>"; };
+		A0479D7A219538490069B807 /* WorkWithConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkWithConfigurator.swift; sourceTree = "<group>"; };
 		A062AD812193E966000A3221 /* Devlight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Devlight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A062AD842193E966000A3221 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A062AD8B2193E968000A3221 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -94,6 +124,42 @@
 				A0479D5C21946B5B0069B807 /* UIColor+Colorhistory.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A0479D5F2195353A0069B807 /* How Work Scene */ = {
+			isa = PBXGroup;
+			children = (
+				A0479D652195372C0069B807 /* HowWork.storyboard */,
+				A0479D67219537420069B807 /* HowWorkPresenter.swift */,
+				A0479D68219537420069B807 /* HowWorkRouter.swift */,
+				A0479D69219537420069B807 /* HowWorkModels.swift */,
+				A0479D6A219537420069B807 /* HowWorkViewController.swift */,
+				A0479D6B219537420069B807 /* HowWorkInteractor.swift */,
+				A0479D6C219537420069B807 /* HowWorkConfigurator.swift */,
+			);
+			path = "How Work Scene";
+			sourceTree = "<group>";
+		};
+		A0479D60219535730069B807 /* Work With Scene */ = {
+			isa = PBXGroup;
+			children = (
+				A0479D73219538310069B807 /* WorkWith.storyboard */,
+				A0479D75219538490069B807 /* WorkWithPresenter.swift */,
+				A0479D76219538490069B807 /* WorkWithRouter.swift */,
+				A0479D77219538490069B807 /* WorkWithModels.swift */,
+				A0479D78219538490069B807 /* WorkWithViewController.swift */,
+				A0479D79219538490069B807 /* WorkWithInteractor.swift */,
+				A0479D7A219538490069B807 /* WorkWithConfigurator.swift */,
+			);
+			path = "Work With Scene";
+			sourceTree = "<group>";
+		};
+		A0479D62219536BD0069B807 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A0479D63219536F20069B807 /* AppStoryboard.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		A062AD782193E965000A3221 = {
@@ -148,6 +214,8 @@
 		A062ADB22193EB21000A3221 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				A0479D60219535730069B807 /* Work With Scene */,
+				A0479D5F2195353A0069B807 /* How Work Scene */,
 				A062ADB721944E85000A3221 /* Portfolio Scene */,
 			);
 			path = Scenes;
@@ -156,6 +224,7 @@
 		A062ADB32193EB2E000A3221 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				A0479D62219536BD0069B807 /* Helpers */,
 				A0479D5E21946B610069B807 /* Extensions */,
 			);
 			path = Library;
@@ -299,6 +368,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A062ADBA21944EC3000A3221 /* Portfolio.storyboard in Resources */,
+				A0479D74219538310069B807 /* WorkWith.storyboard in Resources */,
+				A0479D662195372C0069B807 /* HowWork.storyboard in Resources */,
 				A062AD8F2193E968000A3221 /* LaunchScreen.storyboard in Resources */,
 				A062AD8C2193E968000A3221 /* Assets.xcassets in Resources */,
 				A0479D5B21945EFC0069B807 /* SF in Resources */,
@@ -326,14 +397,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0479D6D219537420069B807 /* HowWorkPresenter.swift in Sources */,
+				A0479D7E219538490069B807 /* WorkWithViewController.swift in Sources */,
 				A062ADC221944EDE000A3221 /* PortfolioRouter.swift in Sources */,
+				A0479D64219536F20069B807 /* AppStoryboard.swift in Sources */,
+				A0479D80219538490069B807 /* WorkWithConfigurator.swift in Sources */,
+				A0479D6F219537420069B807 /* HowWorkModels.swift in Sources */,
+				A0479D7F219538490069B807 /* WorkWithInteractor.swift in Sources */,
 				A062ADC421944EDE000A3221 /* PortfolioViewController.swift in Sources */,
+				A0479D70219537420069B807 /* HowWorkViewController.swift in Sources */,
+				A0479D7D219538490069B807 /* WorkWithModels.swift in Sources */,
+				A0479D6E219537420069B807 /* HowWorkRouter.swift in Sources */,
 				A062AD852193E966000A3221 /* AppDelegate.swift in Sources */,
+				A0479D72219537420069B807 /* HowWorkConfigurator.swift in Sources */,
+				A0479D7B219538490069B807 /* WorkWithPresenter.swift in Sources */,
 				A062ADC321944EDE000A3221 /* PortfolioModels.swift in Sources */,
 				A062ADC121944EDE000A3221 /* PortfolioPresenter.swift in Sources */,
+				A0479D71219537420069B807 /* HowWorkInteractor.swift in Sources */,
 				A062ADC521944EDE000A3221 /* PortfolioInteractor.swift in Sources */,
 				A0479D5D21946B5B0069B807 /* UIColor+Colorhistory.swift in Sources */,
 				A062ADC621944EDE000A3221 /* PortfolioConfigurator.swift in Sources */,
+				A0479D7C219538490069B807 /* WorkWithRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

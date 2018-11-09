@@ -18,13 +18,19 @@
         <!--Portfolio View Controller-->
         <scene sceneID="8sh-DE-kQI">
             <objects>
-                <viewController id="Rxi-6b-kVs" customClass="PortfolioViewController" customModule="Devlight" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PortfolioViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Rxi-6b-kVs" customClass="PortfolioViewController" customModule="Devlight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" id="N22-xm-XYd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <scrollView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4X-dh-Bls">
+                                <rect key="frame" x="0.0" y="150" width="320" height="418"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Rxi-6b-kVs" id="0PC-LH-ZJU"/>
+                                </connections>
+                            </scrollView>
                             <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wfh-Wp-WSr">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="172"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="166"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="GMK-lg-hHd">
                                         <rect key="frame" x="49.5" y="36" width="221" height="50"/>
@@ -40,33 +46,39 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="144" height="29"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="14"/>
                                                 <state key="normal" title="HOW WE WORK">
-                                                    <color key="titleColor" red="0.84313725490196079" green="0.83921568627450982" blue="0.84313725490196079" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tabTapped:" destination="Rxi-6b-kVs" eventType="touchUpInside" id="xtg-CJ-LdO"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZ7-pC-fIp">
                                                 <rect key="frame" x="144" y="0.0" width="144" height="29"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="14"/>
                                                 <state key="normal" title="WE WORK WITH">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" red="0.57254901960000004" green="0.57254901960000004" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tabTapped:" destination="Rxi-6b-kVs" eventType="touchUpInside" id="JWA-br-UwJ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UxK-Q5-Tjp">
-                                        <rect key="frame" x="160" y="153" width="144" height="3"/>
+                                        <rect key="frame" x="16" y="147" width="144" height="3"/>
                                         <color key="backgroundColor" red="1" green="0.65490196078431373" blue="0.043137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="3" id="yrg-sn-cRu"/>
+                                            <constraint firstAttribute="height" constant="3" id="5N3-im-JyU"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="GMK-lg-hHd" firstAttribute="centerX" secondItem="Wfh-Wp-WSr" secondAttribute="centerX" id="2mD-Y5-ePp"/>
-                                    <constraint firstAttribute="bottom" secondItem="UxK-Q5-Tjp" secondAttribute="bottom" constant="16" id="2ze-Ce-6Qr"/>
-                                    <constraint firstItem="UxK-Q5-Tjp" firstAttribute="leading" secondItem="aZ7-pC-fIp" secondAttribute="leading" id="LXq-FG-Inn"/>
-                                    <constraint firstItem="UxK-Q5-Tjp" firstAttribute="top" secondItem="d4L-oS-J3L" secondAttribute="bottom" constant="6" id="W9Y-zx-Rt9"/>
-                                    <constraint firstItem="UxK-Q5-Tjp" firstAttribute="trailing" secondItem="aZ7-pC-fIp" secondAttribute="trailing" id="YOc-0I-eyq"/>
+                                    <constraint firstItem="UxK-Q5-Tjp" firstAttribute="top" secondItem="zYL-Ln-iLe" secondAttribute="bottom" id="3Uh-gT-N5f"/>
+                                    <constraint firstItem="UxK-Q5-Tjp" firstAttribute="leading" secondItem="zYL-Ln-iLe" secondAttribute="leading" id="IFq-aJ-gQm"/>
+                                    <constraint firstItem="UxK-Q5-Tjp" firstAttribute="trailing" secondItem="zYL-Ln-iLe" secondAttribute="trailing" id="K73-Dm-jWH"/>
                                     <constraint firstItem="d4L-oS-J3L" firstAttribute="leading" secondItem="Wfh-Wp-WSr" secondAttribute="leading" constant="16" id="gYe-A5-B8t"/>
+                                    <constraint firstAttribute="bottom" secondItem="UxK-Q5-Tjp" secondAttribute="bottom" constant="16" id="iE6-vt-c0b"/>
                                     <constraint firstAttribute="trailing" secondItem="d4L-oS-J3L" secondAttribute="trailing" constant="16" id="j0O-8a-BNG"/>
                                     <constraint firstItem="d4L-oS-J3L" firstAttribute="top" secondItem="GMK-lg-hHd" secondAttribute="bottom" constant="32" id="jJ7-h4-Mkv"/>
                                 </constraints>
@@ -74,7 +86,11 @@
                         </subviews>
                         <color key="backgroundColor" red="0.81568627450980391" green="0.81176470588235294" blue="0.81568627450980391" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="g4X-dh-Bls" secondAttribute="trailing" id="01I-H4-gwq"/>
                             <constraint firstItem="Wfh-Wp-WSr" firstAttribute="top" secondItem="N22-xm-XYd" secondAttribute="top" id="2xj-Ed-OGS"/>
+                            <constraint firstItem="g4X-dh-Bls" firstAttribute="leading" secondItem="N22-xm-XYd" secondAttribute="leading" id="A87-a5-97s"/>
+                            <constraint firstItem="g4X-dh-Bls" firstAttribute="top" secondItem="UxK-Q5-Tjp" secondAttribute="bottom" id="F3E-hs-dVg"/>
+                            <constraint firstAttribute="bottom" secondItem="g4X-dh-Bls" secondAttribute="bottom" id="GAC-CU-MjP"/>
                             <constraint firstItem="Wfh-Wp-WSr" firstAttribute="leading" secondItem="sgt-ls-maL" secondAttribute="leading" id="J22-gT-dit"/>
                             <constraint firstItem="GMK-lg-hHd" firstAttribute="top" secondItem="sgt-ls-maL" secondAttribute="top" constant="16" id="Nzq-pv-pUC"/>
                             <constraint firstItem="sgt-ls-maL" firstAttribute="trailing" secondItem="Wfh-Wp-WSr" secondAttribute="trailing" id="OIV-UZ-Qt7"/>
@@ -83,6 +99,10 @@
                     </view>
                     <connections>
                         <outlet property="headerView" destination="Wfh-Wp-WSr" id="btr-Mr-pXA"/>
+                        <outlet property="leftTabButton" destination="zYL-Ln-iLe" id="Bs4-vx-PiW"/>
+                        <outlet property="rightTabButton" destination="aZ7-pC-fIp" id="udF-oj-R2r"/>
+                        <outlet property="scrollView" destination="g4X-dh-Bls" id="lcI-bQ-Vlm"/>
+                        <outlet property="tabSelectedView" destination="UxK-Q5-Tjp" id="R09-fj-ALa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iRB-yj-Y1b" userLabel="First Responder" sceneMemberID="firstResponder"/>

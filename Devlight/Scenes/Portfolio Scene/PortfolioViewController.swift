@@ -18,35 +18,23 @@ protocol PortfolioViewControllerOutput {
     
 }
 
-struct Coordinates {
-    let startPoint: CGPoint
-    let endPoint: CGPoint
-}
-
-enum Direction {
-    case topToBottom
-    case leftToRight
-
-    var coordinates: Coordinates {
-        switch self {
-        case .topToBottom:
-            return Coordinates(startPoint: CGPoint(x: 0.5, y: 0.0), endPoint: CGPoint(x: 0.5, y: 1.0))
-        case .leftToRight:
-            return Coordinates(startPoint: CGPoint(x: 0.0, y: 0.5), endPoint: CGPoint(x: 1.0, y: 0.5))
-        }
-    }
-}
-
 class PortfolioViewController: UIViewController, PortfolioViewControllerInput {
 
-    // mARK: IBOutlets
+    // MARK: IBOutlets
 
     @IBOutlet weak var headerView: UIView!
+    @IBOutlet weak var tabSelectedView: UIView!
+    @IBOutlet weak var leftTabButton: UIButton!
+    @IBOutlet weak var rightTabButton: UIButton!
+    @IBOutlet weak var scrollView: UIScrollView!
 
+    
     // MARK: Properties
 
     var output: PortfolioViewControllerOutput?
     var router: PortfolioRouter?
+    var frame: CGRect!
+    let safeAreaTabsConstant: CGFloat = 16.0
     
     // MARK: Object lifecycle
     
@@ -64,11 +52,14 @@ class PortfolioViewController: UIViewController, PortfolioViewControllerInput {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        setupScroll()
         setupGradient(view: headerView,
                       direction: .topToBottom,
                       colors: [.white, UIColor.white.withAlphaComponent(0.0)],
                       locations: [0.85, 1.0])
-        setupGradient(view: view, direction: .topToBottom, colors: [.white, UIColor.veryLightGray])
+        setupGradient(view: view,
+                      direction: .topToBottom,
+                      colors: [.white, UIColor.veryLightGray])
     }
     
     // MARK: Requests
@@ -78,12 +69,51 @@ class PortfolioViewController: UIViewController, PortfolioViewControllerInput {
     
 }
 
+// MARK: IBActions
+
+extension PortfolioViewController {
+
+    @IBAction func tabTapped(_ sender: UIButton) {
+        animateSelectedButton(sender)
+        navigateTo(sender == leftTabButton ? .howWork : .workWith)
+    }
+}
+
+extension PortfolioViewController {
+
+    private func animateSelectedButton(_ selectedButton: UIButton) {
+        leftTabButton.setTitleColor(selectedButton == leftTabButton ? .black : .gray,
+                                    for: .normal)
+        rightTabButton.setTitleColor(selectedButton == rightTabButton ? .black : .gray,
+                                     for: .normal)
+        UIView.animate(withDuration: 0.3) {
+            self.tabSelectedView.center.x = selectedButton.center.x + self.safeAreaTabsConstant
+        }
+    }
+}
+
 // MARK: Setup Style
 
 extension PortfolioViewController {
 
     private func setupStyle() {
+        tabSelectedView.layer.cornerRadius = tabSelectedView.frame.height / 2.0
+    }
+    
+    private func setupScroll() {
+        let boundsView = UIScreen.main.bounds
         
+        frame = CGRect.zero
+        for (index, item) in PortfolioItem.allCases.enumerated() {
+            let viewController = item.instance
+            
+            frame.origin.x = boundsView.width * CGFloat(index)
+            frame.size = scrollView.frame.size
+            
+            viewController.view.frame = frame
+            scrollView.addSubview(viewController.view)
+        }
+        scrollView.contentSize = CGSize(width: boundsView.width * CGFloat(PortfolioItem.allCases.count), height: scrollView.frame.size.height)
     }
 
     private func setupGradient(view: UIView, direction: Direction, colors: [UIColor], locations: [NSNumber]? = nil) {
@@ -94,6 +124,17 @@ extension PortfolioViewController {
         gradientLayer.startPoint = direction.coordinates.startPoint
         gradientLayer.endPoint = direction.coordinates.endPoint
         view.layer.insertSublayer(gradientLayer, at: 0)
+    }
+}
+
+// MARK: Scroll Delegate
+
+extension PortfolioViewController: UIScrollViewDelegate {
+
+    private func navigateTo(_ portfolioItem: PortfolioItem) {
+        guard let index = PortfolioItem.allCases.index(of: portfolioItem) else { return }
+        let offset = CGPoint(x: scrollView.frame.width * CGFloat(index), y: 0.0)
+        scrollView.setContentOffset(offset, animated: true)
     }
 }
 

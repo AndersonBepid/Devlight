@@ -10,6 +10,42 @@
 //
 //  Type "usecase" for some magic!
 
+import Foundation
+import UIKit
+
+struct Coordinates {
+    let startPoint: CGPoint
+    let endPoint: CGPoint
+}
+
+enum Direction {
+    case topToBottom
+    case leftToRight
+    
+    var coordinates: Coordinates {
+        switch self {
+        case .topToBottom:
+            return Coordinates(startPoint: CGPoint(x: 0.5, y: 0.0), endPoint: CGPoint(x: 0.5, y: 1.0))
+        case .leftToRight:
+            return Coordinates(startPoint: CGPoint(x: 0.0, y: 0.5), endPoint: CGPoint(x: 1.0, y: 0.5))
+        }
+    }
+}
+
+enum PortfolioItem: CaseIterable {
+    case howWork
+    case workWith
+    
+    var instance: UIViewController {
+        switch self {
+        case .howWork:
+            return AppStoryboard.howWork.initialViewController()
+        case .workWith:
+            return AppStoryboard.workWith.initialViewController()
+        }
+    }
+}
+
 struct PortfolioScene {
     
 }
