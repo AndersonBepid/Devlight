@@ -11,18 +11,14 @@ import UIKit
 class HowWorkCollectionViewCell: UICollectionViewCell {
 
     // MARK: IBOutlets
-    
+
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var menuImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
-    
+
     // MARK: Properties
-    
+
     static let cellIdentifier = "\(HowWorkCollectionViewCell.self)"
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
 
     override func draw(_ rect: CGRect) {
         super.draw(rect)
@@ -38,7 +34,7 @@ extension HowWorkCollectionViewCell {
         menuImageView.layer.cornerRadius = menuImageView.frame.height / 2.0
         menuImageView.layer.borderWidth = 2.0
         menuImageView.layer.borderColor = UIColor.azure.withAlphaComponent(0.5).cgColor
-        
+    
         containerView.layer.cornerRadius = 10.0
         dropShadow(radius: 8.0)
     }

@@ -24,6 +24,10 @@ class WorkWithViewController: UIViewController, WorkWithViewControllerInput {
     
     var output: WorkWithViewControllerOutput?
     var router: WorkWithRouter?
+    let collectionViewCellHeightCoefficient: CGFloat = 1.0
+    let collectionViewCellWidthCoefficient: CGFloat = 0.6
+    var workServices: [WorkServices] = WorkServices.mockedWorkServices
+
     
     // MARK: Object lifecycle
     
@@ -36,6 +40,8 @@ class WorkWithViewController: UIViewController, WorkWithViewControllerInput {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupCollectionView()
+        registerCells()
     }
     
     // MARK: Requests
@@ -45,24 +51,21 @@ class WorkWithViewController: UIViewController, WorkWithViewControllerInput {
     
 }
 
+extension WorkWithViewController {
+    
+    private func setupCollectionView() {
+        collectionView.backgroundColor = .clear
+    }
+    
+    private func registerCells() {
+        let cellNib = UINib(nibName: WorkWithCollectionViewCell.cellIdentifier, bundle: nil)
+        collectionView.register(cellNib, forCellWithReuseIdentifier: WorkWithCollectionViewCell.cellIdentifier)
+    }
+}
+
 //This should be on configurator but for some reason storyboard doesn't detect ViewController's name if placed there
 extension WorkWithViewController: WorkWithPresenterOutput {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         router?.passDataToNextScene(for: segue)
-    }
-}
-
-extension WorkWithViewController: UICollectionViewDataSource, UICollectionViewDelegate {
-
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2000
-    }
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        return cell
-    }
-
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     }
 }

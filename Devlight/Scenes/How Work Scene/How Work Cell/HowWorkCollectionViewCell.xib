@@ -30,13 +30,13 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="J8f-wt-S0C">
                                 <rect key="frame" x="32" y="26" width="216" height="284"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chess" translatesAutoresizingMaskIntoConstraints="NO" id="N3j-V9-yF3">
+                                    <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chess" translatesAutoresizingMaskIntoConstraints="NO" id="N3j-V9-yF3">
                                         <rect key="frame" x="0.0" y="0.0" width="216" height="216"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="N3j-V9-yF3" secondAttribute="height" multiplier="1:1" id="eQ8-RX-0rE"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="zO5-7W-25W">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="21" translatesAutoresizingMaskIntoConstraints="NO" id="zO5-7W-25W">
                                         <rect key="frame" x="0.0" y="248" width="216" height="36"/>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="30"/>
                                         <color key="textColor" red="0.20784313725490194" green="0.396078431372549" blue="0.63921568627450975" alpha="1" colorSpace="calibratedRGB"/>

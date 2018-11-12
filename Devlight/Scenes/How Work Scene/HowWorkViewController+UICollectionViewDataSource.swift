@@ -12,13 +12,13 @@ import UIKit
 extension HowWorkViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return mokedWork.count
+        return mockedWork.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HowWorkCollectionViewCell.cellIdentifier, for: indexPath)
         guard let howWorkCell = cell as? HowWorkCollectionViewCell else { return UICollectionViewCell() }
-        let workItem = mokedWork[indexPath.item]
+        let workItem = mockedWork[indexPath.item]
 
         howWorkCell.fill(workItem)
 

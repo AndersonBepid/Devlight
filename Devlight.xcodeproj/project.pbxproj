@@ -42,6 +42,14 @@
 		A062ADC521944EDE000A3221 /* PortfolioInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A062ADBF21944EDE000A3221 /* PortfolioInteractor.swift */; };
 		A062ADC621944EDE000A3221 /* PortfolioConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A062ADC021944EDE000A3221 /* PortfolioConfigurator.swift */; };
 		A0A53996219912550024314F /* GravitySliderFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A53995219912550024314F /* GravitySliderFlowLayout.swift */; };
+		A0A539992199223F0024314F /* WorkWithViewController+UICollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A539982199223F0024314F /* WorkWithViewController+UICollectionViewDataSource.swift */; };
+		A0A5399B219922500024314F /* WorkWithViewController+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A5399A219922500024314F /* WorkWithViewController+UICollectionViewDelegate.swift */; };
+		A0E7DCDD2199255300756897 /* WorkWithCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E7DCDC2199255300756897 /* WorkWithCollectionViewCell.swift */; };
+		A0E7DCDF2199258400756897 /* WorkWithCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0E7DCDE2199258400756897 /* WorkWithCollectionViewCell.xib */; };
+		A0E7DCE121992BD100756897 /* WorkWithCollectionViewCell+UICollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E7DCE021992BD100756897 /* WorkWithCollectionViewCell+UICollectionViewDataSource.swift */; };
+		A0E7DCE421992BE800756897 /* WorkWithCollectionViewCell+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E7DCE321992BE800756897 /* WorkWithCollectionViewCell+UICollectionViewDelegate.swift */; };
+		A0E7DCE72199574200756897 /* WorkWithItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E7DCE62199574200756897 /* WorkWithItemCollectionViewCell.swift */; };
+		A0E7DCE92199579700756897 /* WorkWithItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0E7DCE82199579700756897 /* WorkWithItemCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +111,14 @@
 		A062ADBF21944EDE000A3221 /* PortfolioInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioInteractor.swift; sourceTree = "<group>"; };
 		A062ADC021944EDE000A3221 /* PortfolioConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioConfigurator.swift; sourceTree = "<group>"; };
 		A0A53995219912550024314F /* GravitySliderFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GravitySliderFlowLayout.swift; sourceTree = "<group>"; };
+		A0A539982199223F0024314F /* WorkWithViewController+UICollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WorkWithViewController+UICollectionViewDataSource.swift"; sourceTree = "<group>"; };
+		A0A5399A219922500024314F /* WorkWithViewController+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WorkWithViewController+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
+		A0E7DCDC2199255300756897 /* WorkWithCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkWithCollectionViewCell.swift; sourceTree = "<group>"; };
+		A0E7DCDE2199258400756897 /* WorkWithCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkWithCollectionViewCell.xib; sourceTree = "<group>"; };
+		A0E7DCE021992BD100756897 /* WorkWithCollectionViewCell+UICollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WorkWithCollectionViewCell+UICollectionViewDataSource.swift"; sourceTree = "<group>"; };
+		A0E7DCE321992BE800756897 /* WorkWithCollectionViewCell+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WorkWithCollectionViewCell+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
+		A0E7DCE62199574200756897 /* WorkWithItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkWithItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		A0E7DCE82199579700756897 /* WorkWithItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkWithItemCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,13 +146,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A0364FDB2198BB5000CCCD3B /* HowWorkCell */ = {
+		A0364FDB2198BB5000CCCD3B /* How Work Cell */ = {
 			isa = PBXGroup;
 			children = (
-				A0364FDC2198BB7900CCCD3B /* HowWorkCollectionViewCell.swift */,
 				A0364FE02198F49E00CCCD3B /* HowWorkCollectionViewCell.xib */,
+				A0364FDC2198BB7900CCCD3B /* HowWorkCollectionViewCell.swift */,
 			);
-			path = HowWorkCell;
+			path = "How Work Cell";
 			sourceTree = "<group>";
 		};
 		A0479D5E21946B610069B807 /* Extensions */ = {
@@ -151,7 +167,7 @@
 		A0479D5F2195353A0069B807 /* How Work Scene */ = {
 			isa = PBXGroup;
 			children = (
-				A0364FDB2198BB5000CCCD3B /* HowWorkCell */,
+				A0364FDB2198BB5000CCCD3B /* How Work Cell */,
 				A0479D652195372C0069B807 /* HowWork.storyboard */,
 				A0479D6A219537420069B807 /* HowWorkViewController.swift */,
 				A0479D67219537420069B807 /* HowWorkPresenter.swift */,
@@ -168,13 +184,16 @@
 		A0479D60219535730069B807 /* Work With Scene */ = {
 			isa = PBXGroup;
 			children = (
+				A0A53997219921DE0024314F /* Work With Cell */,
 				A0479D73219538310069B807 /* WorkWith.storyboard */,
+				A0479D78219538490069B807 /* WorkWithViewController.swift */,
 				A0479D75219538490069B807 /* WorkWithPresenter.swift */,
 				A0479D76219538490069B807 /* WorkWithRouter.swift */,
 				A0479D77219538490069B807 /* WorkWithModels.swift */,
-				A0479D78219538490069B807 /* WorkWithViewController.swift */,
 				A0479D79219538490069B807 /* WorkWithInteractor.swift */,
 				A0479D7A219538490069B807 /* WorkWithConfigurator.swift */,
+				A0A539982199223F0024314F /* WorkWithViewController+UICollectionViewDataSource.swift */,
+				A0A5399A219922500024314F /* WorkWithViewController+UICollectionViewDelegate.swift */,
 			);
 			path = "Work With Scene";
 			sourceTree = "<group>";
@@ -279,10 +298,10 @@
 			isa = PBXGroup;
 			children = (
 				A062ADB921944EC3000A3221 /* Portfolio.storyboard */,
+				A062ADBE21944EDE000A3221 /* PortfolioViewController.swift */,
 				A062ADBB21944EDE000A3221 /* PortfolioPresenter.swift */,
 				A062ADBC21944EDE000A3221 /* PortfolioRouter.swift */,
 				A062ADBD21944EDE000A3221 /* PortfolioModels.swift */,
-				A062ADBE21944EDE000A3221 /* PortfolioViewController.swift */,
 				A062ADBF21944EDE000A3221 /* PortfolioInteractor.swift */,
 				A062ADC021944EDE000A3221 /* PortfolioConfigurator.swift */,
 			);
@@ -295,6 +314,27 @@
 				A0479D5A21945EFC0069B807 /* SF */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		A0A53997219921DE0024314F /* Work With Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A0E7DCE52199571100756897 /* Work With Item Cell */,
+				A0E7DCDE2199258400756897 /* WorkWithCollectionViewCell.xib */,
+				A0E7DCDC2199255300756897 /* WorkWithCollectionViewCell.swift */,
+				A0E7DCE021992BD100756897 /* WorkWithCollectionViewCell+UICollectionViewDataSource.swift */,
+				A0E7DCE321992BE800756897 /* WorkWithCollectionViewCell+UICollectionViewDelegate.swift */,
+			);
+			path = "Work With Cell";
+			sourceTree = "<group>";
+		};
+		A0E7DCE52199571100756897 /* Work With Item Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A0E7DCE82199579700756897 /* WorkWithItemCollectionViewCell.xib */,
+				A0E7DCE62199574200756897 /* WorkWithItemCollectionViewCell.swift */,
+			);
+			path = "Work With Item Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -403,9 +443,11 @@
 			files = (
 				A062ADBA21944EC3000A3221 /* Portfolio.storyboard in Resources */,
 				A0364FE12198F49E00CCCD3B /* HowWorkCollectionViewCell.xib in Resources */,
+				A0E7DCE92199579700756897 /* WorkWithItemCollectionViewCell.xib in Resources */,
 				A0479D74219538310069B807 /* WorkWith.storyboard in Resources */,
 				A0479D662195372C0069B807 /* HowWork.storyboard in Resources */,
 				A0364FE52199026900CCCD3B /* Assets.xcassets in Resources */,
+				A0E7DCDF2199258400756897 /* WorkWithCollectionViewCell.xib in Resources */,
 				A062AD8F2193E968000A3221 /* LaunchScreen.storyboard in Resources */,
 				A0479D5B21945EFC0069B807 /* SF in Resources */,
 			);
@@ -434,13 +476,16 @@
 			files = (
 				A0479D6D219537420069B807 /* HowWorkPresenter.swift in Sources */,
 				A0479D7E219538490069B807 /* WorkWithViewController.swift in Sources */,
+				A0E7DCE72199574200756897 /* WorkWithItemCollectionViewCell.swift in Sources */,
 				A0364FE32198F99D00CCCD3B /* UIView+Shadow.swift in Sources */,
 				A062ADC221944EDE000A3221 /* PortfolioRouter.swift in Sources */,
 				A0479D64219536F20069B807 /* AppStoryboard.swift in Sources */,
 				A0A53996219912550024314F /* GravitySliderFlowLayout.swift in Sources */,
 				A0479D80219538490069B807 /* WorkWithConfigurator.swift in Sources */,
+				A0E7DCE121992BD100756897 /* WorkWithCollectionViewCell+UICollectionViewDataSource.swift in Sources */,
 				A0479D6F219537420069B807 /* HowWorkModels.swift in Sources */,
 				A0479D7F219538490069B807 /* WorkWithInteractor.swift in Sources */,
+				A0A5399B219922500024314F /* WorkWithViewController+UICollectionViewDelegate.swift in Sources */,
 				A0364FDD2198BB7900CCCD3B /* HowWorkCollectionViewCell.swift in Sources */,
 				A062ADC421944EDE000A3221 /* PortfolioViewController.swift in Sources */,
 				A0479D70219537420069B807 /* HowWorkViewController.swift in Sources */,
@@ -448,15 +493,18 @@
 				A0479D6E219537420069B807 /* HowWorkRouter.swift in Sources */,
 				A062AD852193E966000A3221 /* AppDelegate.swift in Sources */,
 				A0479D72219537420069B807 /* HowWorkConfigurator.swift in Sources */,
+				A0E7DCDD2199255300756897 /* WorkWithCollectionViewCell.swift in Sources */,
 				A0479D7B219538490069B807 /* WorkWithPresenter.swift in Sources */,
 				A062ADC321944EDE000A3221 /* PortfolioModels.swift in Sources */,
 				A054D5CD219893200066D74A /* HowWorkViewController+UICollectionViewDataSource.swift in Sources */,
 				A062ADC121944EDE000A3221 /* PortfolioPresenter.swift in Sources */,
 				A054D5CF219893370066D74A /* HowWorkViewController+UICollectionViewDelegate.swift in Sources */,
+				A0A539992199223F0024314F /* WorkWithViewController+UICollectionViewDataSource.swift in Sources */,
 				A0479D71219537420069B807 /* HowWorkInteractor.swift in Sources */,
 				A062ADC521944EDE000A3221 /* PortfolioInteractor.swift in Sources */,
 				A0479D5D21946B5B0069B807 /* UIColor+Colorhistory.swift in Sources */,
 				A062ADC621944EDE000A3221 /* PortfolioConfigurator.swift in Sources */,
+				A0E7DCE421992BE800756897 /* WorkWithCollectionViewCell+UICollectionViewDelegate.swift in Sources */,
 				A0479D7C219538490069B807 /* WorkWithRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

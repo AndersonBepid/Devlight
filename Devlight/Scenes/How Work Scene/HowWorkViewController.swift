@@ -28,15 +28,10 @@ class HowWorkViewController: UIViewController, HowWorkViewControllerInput {
     
     var output: HowWorkViewControllerOutput?
     var router: HowWorkRouter?
-    let collectionViewCellHeightCoefficient: CGFloat = 0.6
-    let collectionViewCellWidthCoefficient: CGFloat = 0.4
-    let mokedWork: [Work] = [
-        Work(image: "chess", title: "Strategy"),
-        Work(image: "compass", title: "Desing"),
-        Work(image: "debug", title: "Development"),
-        Work(image: "setting", title: "Quality Assurance")
-    ]
-    
+    let collectionViewCellHeightCoefficient: CGFloat = 0.5
+    let collectionViewCellWidthCoefficient: CGFloat = 0.6
+    let mockedWork: [Work] = Work.mockedWork
+
     // MARK: Object lifecycle
     
     override func awakeFromNib() {
@@ -51,6 +46,11 @@ class HowWorkViewController: UIViewController, HowWorkViewControllerInput {
         setupCollectionView()
         registerCells()
     }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        collectionView.reloadData()
+    }
     
     // MARK: Requests
     
@@ -62,8 +62,8 @@ class HowWorkViewController: UIViewController, HowWorkViewControllerInput {
 extension HowWorkViewController {
 
     private func setupCollectionView() {
-        let collectionViewSize = CGSize(width: collectionView.frame.size.height * collectionViewCellWidthCoefficient,
-                                        height: collectionView.frame.size.height * collectionViewCellHeightCoefficient)
+        let collectionViewSize = CGSize(width: collectionView.frame.width * collectionViewCellWidthCoefficient,
+                                        height: collectionView.frame.height * collectionViewCellHeightCoefficient)
         let gravitySliderLayout = GravitySliderFlowLayout(with: collectionViewSize,
                                                           scrollDirection: .horizontal)
         collectionView.collectionViewLayout = gravitySliderLayout

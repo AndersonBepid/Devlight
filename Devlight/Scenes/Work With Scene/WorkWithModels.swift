@@ -10,6 +10,31 @@
 //
 //  Type "usecase" for some magic!
 
+struct WorkServices {
+    let works: [Work]
+
+    static let mockedWorkServices: [WorkServices] = [
+        WorkServices(works: [
+            Work(image: "truck", title: "Delivery"),
+            Work(image: "ecommerce", title: "E-commerce"),
+            Work(image: "grafic", title: "Fintech"),
+            Work(image: "users", title: "Social Network")
+        ]),
+        WorkServices(works: [
+            Work(image: "truck", title: "Delivery"),
+            Work(image: "ecommerce", title: "E-commerce"),
+            Work(image: "grafic", title: "Fintech"),
+            Work(image: "users", title: "Social Network")
+        ]),
+        WorkServices(works: [
+            Work(image: "truck", title: "Delivery"),
+            Work(image: "ecommerce", title: "E-commerce"),
+            Work(image: "grafic", title: "Fintech"),
+            Work(image: "users", title: "Social Network")
+        ]),
+    ]
+}
+
 struct WorkWithScene {
     
 }

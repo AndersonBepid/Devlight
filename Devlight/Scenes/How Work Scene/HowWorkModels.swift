@@ -13,6 +13,13 @@
 struct Work {
     let image: String
     let title: String
+    
+    static let mockedWork: [Work] = [
+        Work(image: "chess", title: "Strategy"),
+        Work(image: "compass", title: "Desing"),
+        Work(image: "debug", title: "Development"),
+        Work(image: "setting", title: "Quality Assurance")
+    ]
 }
 
 struct HowWorkScene {

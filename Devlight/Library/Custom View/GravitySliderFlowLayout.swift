@@ -23,7 +23,7 @@ open class GravitySliderFlowLayout: UICollectionViewFlowLayout {
         
         self.scrollDirection = scrollDirection
         self.itemSize = itemSize
-        self.minimumLineSpacing = sizeByDirection / lineSpacingArgument
+        minimumLineSpacing = sizeByDirection / lineSpacingArgument
     }
     
     public required init?(coder aDecoder: NSCoder) {
@@ -46,6 +46,7 @@ open class GravitySliderFlowLayout: UICollectionViewFlowLayout {
         super.prepare()
         guard let collectionView = self.collectionView else { return }
         self.setup(for: self.scrollDirection, with: collectionView.bounds.size)
+        collectionView.reloadData()
     }
     
     override open func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
