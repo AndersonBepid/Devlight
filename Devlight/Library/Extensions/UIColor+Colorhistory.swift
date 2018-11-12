@@ -54,4 +54,16 @@ extension UIColor {
         return UIColor(red: 0.5724846721, green: 0.5725861788, blue: 0.5724782348, alpha: 1.0000000000);
     }
 
+    /**
+     name: Azure
+     red: 0.2059349418
+     green: 0.3945953250
+     blue: 0.6395075321
+     alpha: 1.0000000000
+     hex: #3565A3
+     **/
+    
+    static var azure: UIColor {
+        return UIColor(red: 0.2059349418, green: 0.3945953250, blue: 0.6395075321, alpha: 1.0000000000);
+    }
 }

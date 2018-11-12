@@ -10,6 +10,11 @@
 //
 //  Type "usecase" for some magic!
 
+struct Work {
+    let image: String
+    let title: String
+}
+
 struct HowWorkScene {
-    
+
 }

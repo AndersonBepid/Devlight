@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Semibold.otf">
+            <string>SFProDisplay-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="HowWorkCollectionViewCell" id="w6G-H9-asC" customClass="HowWorkCollectionViewCell" customModule="Devlight" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="280" height="336"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="280" height="336"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nMr-wz-5gW">
+                        <rect key="frame" x="0.0" y="0.0" width="280" height="336"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="J8f-wt-S0C">
+                                <rect key="frame" x="32" y="26" width="216" height="284"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chess" translatesAutoresizingMaskIntoConstraints="NO" id="N3j-V9-yF3">
+                                        <rect key="frame" x="0.0" y="0.0" width="216" height="216"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="N3j-V9-yF3" secondAttribute="height" multiplier="1:1" id="eQ8-RX-0rE"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="zO5-7W-25W">
+                                        <rect key="frame" x="0.0" y="248" width="216" height="36"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="30"/>
+                                        <color key="textColor" red="0.20784313725490194" green="0.396078431372549" blue="0.63921568627450975" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.98039215686274506" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="J8f-wt-S0C" firstAttribute="centerY" secondItem="nMr-wz-5gW" secondAttribute="centerY" id="5rB-vu-RLf"/>
+                            <constraint firstItem="J8f-wt-S0C" firstAttribute="leading" secondItem="nMr-wz-5gW" secondAttribute="leading" constant="32" id="Ngu-KD-4gD"/>
+                            <constraint firstAttribute="trailing" secondItem="J8f-wt-S0C" secondAttribute="trailing" constant="32" id="fhb-lu-g9K"/>
+                            <constraint firstItem="J8f-wt-S0C" firstAttribute="centerX" secondItem="nMr-wz-5gW" secondAttribute="centerX" id="x2B-hg-aVX"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="nMr-wz-5gW" firstAttribute="leading" secondItem="w6G-H9-asC" secondAttribute="leading" id="CCG-yk-hzn"/>
+                <constraint firstAttribute="trailing" secondItem="nMr-wz-5gW" secondAttribute="trailing" id="dVb-dM-stP"/>
+                <constraint firstItem="nMr-wz-5gW" firstAttribute="top" secondItem="w6G-H9-asC" secondAttribute="top" id="pjB-y7-MCc"/>
+                <constraint firstAttribute="bottom" secondItem="nMr-wz-5gW" secondAttribute="bottom" id="wRw-5o-mmx"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="bw0-xe-T3w"/>
+            <size key="customSize" width="280" height="336"/>
+            <connections>
+                <outlet property="containerView" destination="nMr-wz-5gW" id="B3C-uj-yeb"/>
+                <outlet property="menuImageView" destination="N3j-V9-yF3" id="F5b-8L-eUj"/>
+                <outlet property="titleLabel" destination="zO5-7W-25W" id="7nr-9l-cnl"/>
+            </connections>
+            <point key="canvasLocation" x="288" y="142.1289355322339"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="chess" width="216" height="216"/>
+    </resources>
+</document>

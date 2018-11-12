@@ -20,6 +20,8 @@ protocol WorkWithViewControllerOutput {
 
 class WorkWithViewController: UIViewController, WorkWithViewControllerInput {
     
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     var output: WorkWithViewControllerOutput?
     var router: WorkWithRouter?
     
@@ -47,5 +49,20 @@ class WorkWithViewController: UIViewController, WorkWithViewControllerInput {
 extension WorkWithViewController: WorkWithPresenterOutput {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         router?.passDataToNextScene(for: segue)
+    }
+}
+
+extension WorkWithViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 2000
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     }
 }

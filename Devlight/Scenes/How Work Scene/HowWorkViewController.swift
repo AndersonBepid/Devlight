@@ -20,8 +20,22 @@ protocol HowWorkViewControllerOutput {
 
 class HowWorkViewController: UIViewController, HowWorkViewControllerInput {
     
+    // MARK: IBOutlets
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    // MARK: Properties
+    
     var output: HowWorkViewControllerOutput?
     var router: HowWorkRouter?
+    let collectionViewCellHeightCoefficient: CGFloat = 0.6
+    let collectionViewCellWidthCoefficient: CGFloat = 0.4
+    let mokedWork: [Work] = [
+        Work(image: "chess", title: "Strategy"),
+        Work(image: "compass", title: "Desing"),
+        Work(image: "debug", title: "Development"),
+        Work(image: "setting", title: "Quality Assurance")
+    ]
     
     // MARK: Object lifecycle
     
@@ -34,6 +48,8 @@ class HowWorkViewController: UIViewController, HowWorkViewControllerInput {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupCollectionView()
+        registerCells()
     }
     
     // MARK: Requests
@@ -41,6 +57,23 @@ class HowWorkViewController: UIViewController, HowWorkViewControllerInput {
     
     // MARK: Display logic
     
+}
+
+extension HowWorkViewController {
+
+    private func setupCollectionView() {
+        let collectionViewSize = CGSize(width: collectionView.frame.size.height * collectionViewCellWidthCoefficient,
+                                        height: collectionView.frame.size.height * collectionViewCellHeightCoefficient)
+        let gravitySliderLayout = GravitySliderFlowLayout(with: collectionViewSize,
+                                                          scrollDirection: .horizontal)
+        collectionView.collectionViewLayout = gravitySliderLayout
+        collectionView.backgroundColor = .clear
+    }
+
+    private func registerCells() {
+        let cellNib = UINib(nibName: HowWorkCollectionViewCell.cellIdentifier, bundle: nil)
+        collectionView.register(cellNib, forCellWithReuseIdentifier: HowWorkCollectionViewCell.cellIdentifier)
+    }
 }
 
 //This should be on configurator but for some reason storyboard doesn't detect ViewController's name if placed there

@@ -33,8 +33,8 @@ class PortfolioViewController: UIViewController, PortfolioViewControllerInput {
 
     var output: PortfolioViewControllerOutput?
     var router: PortfolioRouter?
+    var viewControllers: [UIViewController] = []
     var frame: CGRect!
-    let safeAreaTabsConstant: CGFloat = 16.0
     
     // MARK: Object lifecycle
     
@@ -52,6 +52,7 @@ class PortfolioViewController: UIViewController, PortfolioViewControllerInput {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        getViewControllers()
         setupScroll()
         setupGradient(view: headerView,
                       direction: .topToBottom,
@@ -63,7 +64,10 @@ class PortfolioViewController: UIViewController, PortfolioViewControllerInput {
     }
     
     // MARK: Requests
-    
+
+    func getViewControllers() {
+        PortfolioItem.allCases.forEach { viewControllers.append($0.instance()) }
+    }
     
     // MARK: Display logic
     
@@ -82,12 +86,13 @@ extension PortfolioViewController {
 extension PortfolioViewController {
 
     private func animateSelectedButton(_ selectedButton: UIButton) {
+        guard let stackView = selectedButton.superview else { return }
         leftTabButton.setTitleColor(selectedButton == leftTabButton ? .black : .gray,
                                     for: .normal)
         rightTabButton.setTitleColor(selectedButton == rightTabButton ? .black : .gray,
                                      for: .normal)
         UIView.animate(withDuration: 0.3) {
-            self.tabSelectedView.center.x = selectedButton.center.x + self.safeAreaTabsConstant
+            self.tabSelectedView.center.x = stackView.convert(selectedButton.center, to: nil).x
         }
     }
 }
@@ -104,14 +109,12 @@ extension PortfolioViewController {
         let boundsView = UIScreen.main.bounds
         
         frame = CGRect.zero
-        for (index, item) in PortfolioItem.allCases.enumerated() {
-            let viewController = item.instance
-            
+        for (index, _) in PortfolioItem.allCases.enumerated() {
             frame.origin.x = boundsView.width * CGFloat(index)
             frame.size = scrollView.frame.size
             
-            viewController.view.frame = frame
-            scrollView.addSubview(viewController.view)
+            viewControllers[index].view.frame = frame
+            scrollView.addSubview(viewControllers[index].view)
         }
         scrollView.contentSize = CGSize(width: boundsView.width * CGFloat(PortfolioItem.allCases.count), height: scrollView.frame.size.height)
     }
@@ -135,6 +138,25 @@ extension PortfolioViewController: UIScrollViewDelegate {
         guard let index = PortfolioItem.allCases.index(of: portfolioItem) else { return }
         let offset = CGPoint(x: scrollView.frame.width * CGFloat(index), y: 0.0)
         scrollView.setContentOffset(offset, animated: true)
+    }
+}
+
+extension PortfolioItem {
+    
+    func instance() -> UIViewController {
+        switch self {
+        case .howWork:
+            return AppStoryboard.howWork.initialViewController()
+        case .workWith:
+            return AppStoryboard.workWith.initialViewController()
+        }
+    }
+}
+
+extension Array where Element == PortfolioItem {
+    
+    func instances() -> [UIViewController] {
+        return self.map { $0.instance() }
     }
 }
 

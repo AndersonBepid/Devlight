@@ -35,15 +35,6 @@ enum Direction {
 enum PortfolioItem: CaseIterable {
     case howWork
     case workWith
-    
-    var instance: UIViewController {
-        switch self {
-        case .howWork:
-            return AppStoryboard.howWork.initialViewController()
-        case .workWith:
-            return AppStoryboard.workWith.initialViewController()
-        }
-    }
 }
 
 struct PortfolioScene {

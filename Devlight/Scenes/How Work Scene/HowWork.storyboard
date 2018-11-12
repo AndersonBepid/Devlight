@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jfK-7L-hkH">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -14,27 +14,42 @@
         <scene sceneID="Y3i-hf-KFn">
             <objects>
                 <viewController storyboardIdentifier="HowWorkViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jfK-7L-hkH" customClass="HowWorkViewController" customModule="Devlight" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="XX0-Nk-hex">
+                    <view key="view" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" id="XX0-Nk-hex">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Houston, we have a problem!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bc5-xX-oTr">
-                                <rect key="frame" x="76.5" y="333" width="222" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Fto-mE-1Yw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2Hd-Sd-pEH">
+                                    <size key="itemSize" width="226" height="350"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="jfK-7L-hkH" id="Ref-47-ybJ"/>
+                                    <outlet property="delegate" destination="jfK-7L-hkH" id="1c0-y8-tc6"/>
+                                    <outlet property="dragDelegate" destination="jfK-7L-hkH" id="bVX-TG-dmi"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="Bc5-xX-oTr" firstAttribute="centerX" secondItem="6OC-iF-O9R" secondAttribute="centerX" id="6Yn-b7-HPb"/>
-                            <constraint firstItem="Bc5-xX-oTr" firstAttribute="centerY" secondItem="6OC-iF-O9R" secondAttribute="centerY" id="lgu-ED-zDR"/>
+                            <constraint firstAttribute="trailing" secondItem="Fto-mE-1Yw" secondAttribute="trailing" id="6eO-UV-rfC"/>
+                            <constraint firstItem="Fto-mE-1Yw" firstAttribute="top" secondItem="XX0-Nk-hex" secondAttribute="top" id="kYz-z3-adH"/>
+                            <constraint firstAttribute="bottom" secondItem="Fto-mE-1Yw" secondAttribute="bottom" id="kev-8g-1c1"/>
+                            <constraint firstItem="Fto-mE-1Yw" firstAttribute="leading" secondItem="XX0-Nk-hex" secondAttribute="leading" id="rlL-SD-MWr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6OC-iF-O9R"/>
                     </view>
                     <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="collectionView" destination="Fto-mE-1Yw" id="xD5-oU-c4l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lAu-Pg-HFm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.8125" y="129.40140845070422"/>
         </scene>
     </scenes>
 </document>
